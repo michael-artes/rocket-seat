@@ -1,3 +1,8 @@
+import { somaFuncoes as somaNovo } from './funcoes';
+import * as funcoes from './funcoes';
+
+import nomeSomaQualquer from './soma';
+
 
 //HERANÇA COM ES6
 class List {
@@ -195,3 +200,6 @@ const div = {
 }
 
 console.log(div);
+console.log(somaNovo(10,5));
+console.log(nomeSomaQualquer(30,40));
+console.log(funcoes.subFuncoes(10,5));
