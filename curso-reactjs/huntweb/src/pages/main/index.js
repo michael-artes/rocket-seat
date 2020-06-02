@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+
+import { Link } from 'react-router-dom';
  
 import './styles.css';
 
@@ -37,9 +39,6 @@ export default class Main extends Component {
 
         const { page, productInfo } = this.state;
         
-        console.log(page);
-        console.log(productInfo);
-
         if (page === productInfo.pages) return;
 
         const pageNumber = page + 1;
@@ -58,7 +57,7 @@ export default class Main extends Component {
                         <strong>{product.title}</strong>
                         <p>{product.description}</p>
 
-                        <a href="/">Acessar</a>
+                        <Link to={`/products/${product._id}`}>Acessar</Link>
                     </article>
                 ))}
                 <div className="actions">
